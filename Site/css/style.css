@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Accueil */
+
+.Accueil{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/banniere.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 50px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color:rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 40px 0 40px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bouton{
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.bouton:hover{
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    background: rgba(255, 0, 0, 0.7);
+    transition: 1s;
+}
+
+@media(max-width : 900px) {
+    .text-box h1{
+        font-size: 30px;
+    }
+
+    .nav-links{
+        position: relative;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .nav-links ul li{
+        display: block;
+        padding-top: 30px;
+    }
+
+    .nav-links ul li::after{
+        width: 0%;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after{
+        width: 100%;
+    }
+}
+
+/* Compétences */
+
+.Competences{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Competences p{
+    padding: 50px;
+}
+
+.Competences ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 30px 50px;
+    position: relative;
+    background: rgba(0, 0, 0);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.Competences ul li:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9);
+}
+
+hr{
+    margin-top: 100px;
+}
+
+/* Projets */
+
+.Projets{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Projets h1{
+    font-size: 36px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Projets p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.colonne{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Projets-col{
+    flex-basis: 31%;
+    background: rgba(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.Projets-col h3{
+    color: rgba(255, 255, 255);
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.Projets-col p{
+    color: rgba(255, 255, 255);
+}
+
+.Projets-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9);
+}
+
+.Projets-col img{
+    padding-top: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+@media(max-width: 1300px) {
+    .colonne{
+        flex-direction: column;
+    }
+
+    .Projets-col img{
+        padding-top: 20px;
+        padding-bottom: 60px;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Contact */
+
+.Contact{
+    padding: 50px;
+}
+
+.Contact h1{
+    text-align: center;
+    padding: 20px;
+}
+
+.Contact div{
+    align-items: center;
+    display: flex;
+}
+
+.Contact h5{
+    padding: 20px;
+}
+
+/* A Propos */
+
+.APropos{
+    color:rgb(255, 255, 255);
+    background: rgba(0, 0, 0);
+    text-align: center;
+    padding: 50px;
+}
+
+.APropos h4{
+    margin-bottom: 40px;
+}
+
+.APropos p{
+    margin-bottom: 40px;
+}
+
+.APropos i{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.MentionsLegales{
+    padding: 50px;
+}
+
+.MentionsLegales h1{
+    padding-bottom: 30px;
+}
+
+.MentionsLegales p{
+    padding: 30px;
+}
